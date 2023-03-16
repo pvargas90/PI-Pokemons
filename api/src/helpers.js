@@ -1,12 +1,13 @@
-const axios = require('axios');
-const { Pokemon, Type } = require('./db');
+const axios = require('axios'); // paquete de npm que nos permite hacer peticiones a un enlace Http
+const { Pokemon, Type } = require('./db'); //traemos info de bd
 
+//funcion trae pokemons de api
 let getPokemonApi = async () => {
 	let info = [];
-	for (let i = 1; i <= 40; i++) {
+	for (let i = 1; i <= 40; i++) { // recorremos la api hasta 40
 		info.push(axios.get('https://pokeapi.co/api/v2/pokemon/' + i));
 	}
-	return Promise.all(info).then((response) => {
+	return Promise.all(info).then((response) => { // nos traemos la info(segun esos parametros)
 		const pokemones = response.map((info) => {
 			return (poke = {
 				name: info.data.name,
@@ -20,6 +21,8 @@ let getPokemonApi = async () => {
 	});
 };
 
+
+// funcion trae
 let getPokemonDB = () => {
 	let poke = Pokemon.findAll({
 		attributes: ['name', 'id', 'img', 'attack'],
