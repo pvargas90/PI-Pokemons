@@ -1,5 +1,7 @@
-let { Type } = require('../db');
+let { Type } = require('../db'); //requerimos type de la bd
 
+
+// funcion que traiga todos los tipes con atributos de id y name. 
 let getTypesDB = async () => {
 	let types = await Type.findAll({
 		attributes: ['id', 'name'],

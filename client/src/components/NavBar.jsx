@@ -9,6 +9,8 @@ const NavBar = ({
 	sort,
 	setCurrentPage,
 }) => {
+
+	// estilos de la navBar
 	const NavFilter = styled.nav`
 		display: flex;
 		justify-content: space-between;

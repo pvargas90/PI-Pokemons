@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState } from 'react'; //es un Hook que permite añadir el estado de React a un componente funcional
+import { useDispatch } from 'react-redux'; // Es una función que permite lanzar acciones (actions) al store, con la intención de afectar el estado.
 import { getPokemonsByName } from '../actions';
 
 const SearchBar = ({ setCurrentPage }) => {
@@ -28,11 +28,12 @@ const SearchBar = ({ setCurrentPage }) => {
 	const dispatch = useDispatch();
 	const [pokeName, setPokeName] = useState('');
 
+	//sincroniza el valor de los campos con el estado usando componentes controlados
 	function handleInputChange(e) {
 		e.preventDefault();
 		setPokeName(e.target.value);
 	}
-
+	// se usa para especificar el método que debe de ejecutarse cuando el formulario es guardado.
 	function handleSubmit(e) {
 		e.preventDefault();
 		dispatch(getPokemonsByName(pokeName.trim()));

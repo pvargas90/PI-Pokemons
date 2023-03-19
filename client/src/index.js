@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { store } from './store/index';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react'; // importa react
+import ReactDOM from 'react-dom'; // importa metodos de dom 
+import './index.css'; // importa el index de estilos
+import App from './App'; // la distribucion de la app esta en otro archivo
+import reportWebVitals from './reportWebVitals'; 
+import { Provider } from 'react-redux'; // el componente provider acepta una prop value que se pasara a los componentes consumidores
+import { store } from './store/index'; // representa el estado de la app, se le aplica el reducer 
+import { BrowserRouter } from 'react-router-dom'; // inyecta propiedades al componenete para poder acceder al historial de navegacion
 
 ReactDOM.render(
 	<Provider store={store}>

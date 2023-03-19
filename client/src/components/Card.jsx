@@ -48,8 +48,6 @@ export default function Card({ id, name, img, types }) {
 	const InfoType = styled.p`
 		font-size: 14px;
 		margin: 12px 5px;
-		background-color: #ffffff42;
-		border-radius: 15px;
 		display: inline;
 		padding: 5px 15px;
 	`;

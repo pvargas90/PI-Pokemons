@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 const Paged = ({ pokemonsLength, pokePerPage, currentPage, paged }) => {
+// los estilos del paginado
 	const PagesNav = styled.nav`
 		color: white;
 		position: absolute;
@@ -52,6 +53,7 @@ const Paged = ({ pokemonsLength, pokePerPage, currentPage, paged }) => {
 		}
 	`;
 
+	// funcion de paginado
 	const arrayPages = [];
 	for (let i = 0; i < Math.ceil(pokemonsLength / pokePerPage); i++) {
 		arrayPages.push(i + 1);

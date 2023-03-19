@@ -5,6 +5,7 @@ const initialState = {
 	types: [],
 };
 
+// son funciones que reciben el estado actual de la app y la accion a realizar, y devuelven un estado nuevo 
 function rootReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'GET_POKEMONS':

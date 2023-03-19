@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react'; 
+import { useDispatch, useSelector } from 'react-redux'; //useSelector es un Hook que nos permite extraer datos del store de Redux utilizando una función selectora
 import {
 	getPokemons,
 	getTypes,

@@ -1,4 +1,4 @@
-const {
+const {						// crea variables para estas funciones
 	getPokemonApi,
 	getPokemonDB,
 	pokeFilterByName,
@@ -6,8 +6,10 @@ const {
 	getPokemonDbByID,
 } = require('../helpers');
 
+//variables de bd
 const { Pokemon, Type } = require('../db');
 
+//aplica funciones, construye un arreglo nuevo con las dos, filtra por nombre
 const getAllPokemons = async (name) => {
 	const [api, db] = await Promise.all([getPokemonApi(), getPokemonDB()]);
 	const allPoke = [...db, ...api];
@@ -17,6 +19,7 @@ const getAllPokemons = async (name) => {
 	}
 	return allPoke;
 };
+
 
 const getPokemonDetails = async (id) => {
 	let poke = null;
@@ -28,6 +31,7 @@ const getPokemonDetails = async (id) => {
 	return poke;
 };
 
+// crea un pokemon con los parametros obtenidos
 const createPokemon = async (
 	name,
 	id,

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import error from '../img/error.jpg';
 
 const Error = () => {
 	const Container = styled.div`
@@ -20,7 +19,6 @@ const Error = () => {
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
-		background-image: url(${error});
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;

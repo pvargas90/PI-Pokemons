@@ -1,10 +1,10 @@
-import './App.css';
-import { Route, Switch } from 'react-router';
-import Home from './components/Home';
+import './App.css'; // importa el estilo de la app
+import { Route, Switch } from 'react-router'; 
+import Home from './components/Home'; // importa las paginas que se montan o desmontan
 import PokeCreate from './components/PokeCreate/PokeCreate';
 import LandingPage from './components/LandingPage';
-import Error from './components/Error';
-import Detail from './components/Detail';
+import Error from './components/Error'; // importa una funcion para arrojar cuando haya error
+import Detail from './components/Detail'; 
 function App() {
 	return (
 		<div className='App'>
